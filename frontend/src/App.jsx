@@ -65,6 +65,9 @@ import OrderDetailsPage from './pages/OrderDetailsPage/OrderDetailsPage';
 
 // Pages - Admin
 import AdminLogin from './pages/AdminLogin';
+import ForgotPassword from "./pages/ForgotPassword";
+import VerifyCode from "./pages/VerifyCode";
+import ResetPassword from "./pages/ResetPassword";
 import SignUpPage from './pages/admin/Auth/SignUpPage';
 import AdminDashboard from './pages/admin/AdminDashboard/AdminDashboard';
 import ContentManager from './pages/admin/ContentManager/ContentManager';
@@ -162,6 +165,9 @@ const AppContent = () => {
 
           {/* Admin Routes */}
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/forgot-password" element={<ForgotPassword />} /> 
+          <Route path="/admin/verify-code" element={<VerifyCode />} />
+          <Route path="/admin/reset-password" element={<ResetPassword />} />
           <Route path="/admin/signup" element={<SignUpPage />} />
           <Route path="/admin/article/:slug" element={<AdminArticlePage />} />
           <Route element={<ProtectedRoute><AdminLayout /></ProtectedRoute>}>

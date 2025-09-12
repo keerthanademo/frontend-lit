@@ -1,107 +1,126 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../context/context-admin/AuthContext';
-import '../styles/AdminLogin.css'; //  CSS stays imported here
+import { FiLock, FiMail, FiEye, FiEyeOff } from 'react-icons/fi';
+import '../styles/AdminLogin.css';
 
 const AdminLogin = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { login, isAuthenticated } = useAuth();
+  const { login } = useAuth();
 
   const [credentials, setCredentials] = useState({ email: '', password: '' });
-  const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
-  // const params = new URLSearchParams(location.search);
-  // const redirectParam = params.get('redirect');
+  // ✅ Toast state
+  const [toast, setToast] = useState({ message: '', type: '' });
 
-  // let redirectPath = '/admin/dashboard';
-  // if (redirectParam === 'ecommerce') {
-  //   redirectPath = '/admin/ecomDashboard';
-  // }
+  // ✅ Show toast and auto-hide after 3 seconds
+  const showToast = (message, type = 'success') => {
+    setToast({ message, type });
 
-  // Get ?redirect= from the URL
-let redirectParam = new URLSearchParams(location.search).get('redirect');
+    setTimeout(() => {
+      setToast({ message: '', type: '' });
+    }, 3000);
+  };
 
-// If not found in URL, check sessionStorage
-if (!redirectParam) {
-  redirectParam = sessionStorage.getItem('redirectAfterLogin');
-} else {
-  sessionStorage.setItem('redirectAfterLogin', redirectParam);
-}
+  // Handle redirect path
+  let redirectParam = new URLSearchParams(location.search).get('redirect');
+  if (!redirectParam) {
+    redirectParam = sessionStorage.getItem('redirectAfterLogin');
+  } else {
+    sessionStorage.setItem('redirectAfterLogin', redirectParam);
+  }
 
-// Decide where to go
-let redirectPath = '/admin/dashboard';
-if (redirectParam === 'ecommerce') {
-  redirectPath = '/admin/ecomDashboard';
-}
-
-
-  // useEffect(() => {
-  //   if (isAuthenticated) {
-  //     navigate(redirectPath);
-  //   }
-  // }, [isAuthenticated, navigate, redirectPath]);
-
-
+  let redirectPath = '/admin/dashboard';
+  if (redirectParam === 'ecommerce') {
+    redirectPath = '/admin/ecomDashboard';
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCredentials(prev => ({ ...prev, [name]: value }));
   };
 
-//   if (success) {
-//   console.log("Redirecting to:", redirectPath); // ✅ This will help you confirm
-//   navigate(redirectPath);
-// }
-
   const handleLogin = (e) => {
     e.preventDefault();
-    setError('');
+
     const success = login(credentials.email, credentials.password);
+
     if (success) {
-      navigate(redirectPath);
+      showToast('Login successful! Redirecting...', 'success');
+      setTimeout(() => {
+        navigate(redirectPath);
+      }, 2000);
     } else {
-      setError('Invalid email or password. Please try again.');
+      showToast('Invalid email or password', 'error');
     }
   };
 
   return (
-    <div className="admin-login-container">
-      <div className="admin-login-box">
-        <h1>Admin Login</h1>
-        {error && <div className="error-message">{error}</div>}
+    <div className="admin-login-wrapper">
+      <div className="admin-login-card">
+        <div className="login-icon-circle">
+          <FiLock size={24} />
+        </div>
+        <h2 className="login-title">Admin Login</h2>
+        <p className="login-subtitle">Enter your credentials to access the dashboard</p>
+
         <form onSubmit={handleLogin} className="admin-login-form">
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={credentials.email}
-              onChange={handleChange}
-              required
-              placeholder="Enter your email"
-            />
+          <div className="input-group">
+            <label>Email Address</label>
+            <div className="input-with-icon">
+              <FiMail className="input-icon" />
+              <input
+                type="email"
+                name="email"
+                placeholder="admin@example.com"
+                value={credentials.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={credentials.password}
-              onChange={handleChange}
-              required
-              placeholder="Enter your password"
-            />
+
+          <div className="input-group">
+            <label>Password</label>
+            <div className="input-with-icon">
+              <FiLock className="input-icon" />
+              <input
+                type={showPassword ? 'text' : 'password'}
+                name="password"
+                placeholder="••••••••"
+                value={credentials.password}
+                onChange={handleChange}
+                required
+              />
+              <span
+                className="toggle-password"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {/* {showPassword ? <FiEyeOff /> : <FiEye />} */}
+              </span>
+            </div>
           </div>
-          <button type="submit" className="login-button">
-            Login
-          </button>
+
+          <button type="submit" className="login-button">Log In</button>
         </form>
+
+        <div className="login-links">
+          <Link to="/admin/forgot-password">Forgot your password?</Link>
+        </div>
       </div>
+
+      {/* ✅ Toast Message */}
+      {toast.message && (
+        <div
+          className={`toast ${toast.type === 'success' ? 'toast-success' : 'toast-error'} show`}
+        >
+          {toast.message}
+        </div>
+      )}
     </div>
   );
 };
 
-export default AdminLogin;  
+export default AdminLogin;

@@ -123,9 +123,15 @@ const Navbar = () => {
               <IconButton color="inherit">
                 <img src={notificationIcon} alt="Notifications" style={{ width: '24px', height: '24px' }} />
               </IconButton>
-              <IconButton color="inherit" component={RouterLink} to="/profile" sx={{ padding: '8px' }}>
+              {/* <IconButton color="inherit" component={RouterLink} to="/signin" sx={{ padding: '8px' }}>
                 <img src={profileAvatar} alt="Profile" style={{ width: '24px', height: '24px', borderRadius: '50%' }} />
-              </IconButton>
+              </IconButton> */}
+              <RouterLink to="/signin">
+  <IconButton color="inherit" sx={{ padding: '8px' }}>
+    <img src={profileAvatar} alt="Profile" style={{ width: '24px', height: '24px', borderRadius: '50%' }} />
+  </IconButton>
+</RouterLink>
+
               <button
                 className={`mobile-menu-btn${mobileMenuOpen ? ' open' : ''}`}
                 aria-label="Toggle menu"
@@ -232,9 +238,15 @@ const Navbar = () => {
               <IconButton color="inherit">
                 <img src={notificationIcon} alt="Notifications" style={{ width: '24px', height: '24px' }} />
               </IconButton>
-              <IconButton color="inherit" onClick={handleProfileMenuOpen}>
+              {/* <IconButton color="inherit" onClick={handleProfileMenuOpen}>
                 <img src={profileAvatar} alt="Profile" style={{ width: '24px', height: '24px', borderRadius: '50%' }} />
-              </IconButton>
+              </IconButton> */}
+              <RouterLink to="/signin">
+  <IconButton color="inherit" sx={{ padding: '8px' }}>
+    <img src={profileAvatar} alt="Profile" style={{ width: '24px', height: '24px', borderRadius: '50%' }} />
+  </IconButton>
+</RouterLink>
+
             </Box>
           </>
         )}
@@ -252,7 +264,7 @@ const Navbar = () => {
             horizontal: 'right',
           }}
         >
-          <MenuItem onClick={handleProfileMenuClose} component={RouterLink} to="/profile">Profile</MenuItem>
+          <MenuItem onClick={handleProfileMenuClose} component={RouterLink} to="/signin">Profile</MenuItem>
           <MenuItem onClick={handleProfileMenuClose} component={RouterLink} to="/orders">Orders</MenuItem>
           <MenuItem onClick={handleProfileMenuClose} component={RouterLink} to="/settings">Settings</MenuItem>
         </Menu>

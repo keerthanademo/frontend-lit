@@ -78,6 +78,9 @@ const Footer = () => {
               <Link to="/terms-of-service" className="footer-link">
                 Terms of Service
               </Link>
+              <Link to="/subscriptions" className="footer-link">
+                Subscriptions
+              </Link>
             </nav>
             <div className="footer-subscribe">
               <h3>Stay Up To Date</h3>

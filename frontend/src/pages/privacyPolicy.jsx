@@ -59,7 +59,8 @@ const PrivacyPolicy = () => {
           <h2>5. Your Rights</h2>
           <p>
             You can access, edit, or delete your data anytime by contacting us at{' '}
-            <a href="mailto:info@luxuryintaste.com">info@luxuryintaste.com</a>.
+            <a href="mailto:info@luxuryintaste.com">info@luxuryintaste.com</a>.<br></br><br></br>
+            <p>Full Privacy Policy:<a href=" https://luxuryintaste.com/privacy-policy">https://luxuryintaste.com/privacy-policy</a></p>
           </p>
         </section>
       </main>

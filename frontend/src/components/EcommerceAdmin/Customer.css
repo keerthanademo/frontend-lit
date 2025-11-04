@@ -1,0 +1,363 @@
+/* ====== Base / Page ====== */
+body {
+  background: #0d0d0d;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+}
+
+.customer-page {
+  padding: 25px 40px;
+}
+
+h1 {
+  color: #b388ff;
+  margin-bottom: 20px;
+}
+
+/* ====== Summary Cards ====== */
+.summary-cards {
+  display: flex;
+  gap: 100px;
+  margin-bottom: 25px;
+}
+
+.summary-card {
+  background: rgba(88, 28, 135, 0.4);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid #6b21a8;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(179, 136, 255, 0.25);
+}
+
+.summary-card h3 {
+  font-size: 15px;
+  color: #faf0f0;
+  opacity: 0.8;
+}
+
+.summary-card p {
+  /* font-size: 1.3rem;
+  font-weight: bold; */
+  font-size: 22px;
+  font-weight: bold;
+  color: #8a2be2;
+}
+
+/* ====== Search Bar ====== */
+.search-bar input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: rgba(110, 12, 184, 0.4);
+  border: 1px solid #6b21a8;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* ====== Table ====== */
+.customer-table {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: rgba(110, 12, 184, 0.4);
+  text-align: left;
+  padding: 10px;
+  color: white;
+  border-bottom: 1px solid #333;
+  font-weight: 200;
+}
+
+td {
+  padding: 12px 10px;
+  border-top: 1px solid #333;
+}
+
+.customer-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  background: linear-gradient(135deg, #7c4dff, #b388ff);
+  color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.customer-id {
+  color: #888;
+  font-size: 0.75rem;
+}
+
+.contact-info small {
+  color: #888;
+}
+
+/* ====== Status badges ====== */
+/* ====== Fix equal width for all status badges ====== */
+.status-badge {
+  display: inline-block;
+  width: 90px; /* You can adjust width (80–100px looks best) */
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.status-badge.vip { background: rgba(110, 12, 184, 0.4);color:#c796ef }
+.status-badge.active {  background-color: rgba(56, 142, 60, 0.2);color: #c8e6c9; }
+.status-badge.inactive { background-color: rgba(246, 170, 170, 0.2);color: #fba7a7; }
+
+/* ====== View button ====== */
+.view-btn {
+  background: none;
+  border: none;
+  color: #b388ff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.view-btn:hover {
+  color: #d1b3ff;
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(179, 136, 255, 0.35);
+}
+
+
+/* ====== Modal overlay ====== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+/* ====== Modal details (main container) ====== */
+.modal-details {
+  background: rgba(20,20,22,0.85);
+  border-radius: 18px;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 28px;
+  color: #fff;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 30px rgba(124,77,255,0.12);
+  border: 1px solid rgba(179,136,255,0.06);
+  animation: fadeIn 0.22s ease-out;
+}
+
+/* ====== Header ====== */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  gap: 16px;
+}
+.header-left { display:flex; gap:14px; align-items:center; }
+.header-right { display:flex; gap:12px; align-items:center; }
+
+/* avatar large */
+.avatar-lg {
+  background: linear-gradient(135deg, #7c4dff, #b388ff);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size: 1.7rem;
+  font-weight:700;
+  box-shadow: 0 6px 20px rgba(124,77,255,0.18);
+}
+
+/* name + id */
+.modal-title h2 { margin:0; font-size:1.35rem; color:#fff; }
+.modal-id { color:#bdbdbd; font-size:0.9rem; }
+
+/* close button */
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #cfcfcf;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.close-btn:hover { color: #fff; }
+
+/* ====== Status badge in header ====== */
+.badge {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.77rem;
+  display:inline-block;
+}
+
+/* status glow variants */
+.badge.vip {
+  background: linear-gradient(135deg,#b388ff,#7c4dff);
+  box-shadow: 0 6px 18px rgba(124,77,255,0.22);
+}
+.badge.active {
+  background: linear-gradient(135deg,#00c853,#009624);
+  box-shadow: 0 6px 18px rgba(0,200,83,0.18);
+}
+.badge.inactive {
+  background: linear-gradient(135deg,#777,#333);
+  box-shadow: 0 6px 12px rgba(80,80,80,0.12);
+}
+
+/* add subtle colored top border on the modal depending on status */
+.modal-details.vip { box-shadow: 0 10px 40px rgba(124,77,255,0.25); border-top: 4px solid rgba(124,77,255,0.18); }
+.modal-details.active { box-shadow: 0 10px 40px rgba(0,200,83,0.16); border-top: 4px solid rgba(0,200,83,0.12); }
+.modal-details.inactive { box-shadow: 0 8px 30px rgba(100,100,100,0.12); border-top: 4px solid rgba(100,100,100,0.06); }
+
+/* ====== Section heading ====== */
+.section { margin-top: 18px; }
+.section h3 {
+  color: #d9c8ff;
+  margin-bottom: 12px;
+  font-size: 1.02rem;
+  border-left: 3px solid rgba(179,136,255,0.25);
+  padding-left: 10px;
+}
+
+/* ====== Card grid: each section has 4 small cards ====== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* small info card */
+.info-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 12px 14px;
+  transition: transform .18s ease, box-shadow .18s ease;
+  color: #f1f1f1;
+  min-height: 72px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.info-card h4 {
+  margin: 0 0 6px 0;
+  font-size: 0.78rem;
+  color: #cdb8ff;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.info-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 600;
+}
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(124,77,255,0.14);
+}
+
+/* ====== Footer buttons ====== */
+.modal-footer {
+  display:flex;
+  justify-content:flex-end;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.email-btn, .order-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.email-btn {
+  background: linear-gradient(135deg,#b388ff,#7c4dff);
+  color: #fff;
+  box-shadow: 0 8px 26px rgba(124,77,255,0.12);
+}
+.order-btn {
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ====== Responsive tweaks ====== */
+@media (max-width: 980px) {
+  .modal-details { width: calc(100% - 32px); padding: 20px; }
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+  .summary-cards { flex-wrap: wrap; gap: 12px; }
+}
+@media (max-width: 540px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .avatar-lg { width:56px; height:56px; font-size:1.25rem; }
+}
+
+/* ====== animation ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px) scale(.995); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+/* ====== Orders Table inside modal ====== */
+.customer-orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.customer-orders-table th, 
+.customer-orders-table td {
+  padding: 10px;
+  text-align: left;
+  border-top: 1px solid #333;
+  font-size: 0.95rem;
+}
+.customer-orders-table th {
+  color: #b388ff;
+  font-weight: 600;
+}
+
+/* Status badges for orders */
+.status-badge.delivered { background: #00c853; color: #fff; }
+.status-badge.shipped { background: #ffeb3b; color: #000; }
+.status-badge.pending { background: #2196f3; color: #fff; }
+.status-badge.cancelled { background: #f44336; color: #fff; }

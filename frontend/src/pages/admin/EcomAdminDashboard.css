@@ -106,3 +106,15 @@
     display: block;
   }
 }
+
+/* Hide sidebar for full screen pages like offers */
+.ecom-admin-content.full-width {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Optional smooth transition */
+.ecom-admin-content {
+  transition: all 0.3s ease;
+}

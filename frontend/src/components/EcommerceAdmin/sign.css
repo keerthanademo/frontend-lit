@@ -1,0 +1,164 @@
+/* SignIn.css */
+
+/* Reset basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Main page container */
+.page-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Left section */
+.left-section {
+  flex: 1;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.left-content {
+  text-align: center;
+}
+
+.left-content img {
+  width: 150px;
+  margin-bottom: 2rem;
+}
+
+.left-content h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Right section */
+.right-section {
+  flex: 1;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.Title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.Title-h2 h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  color: #a0aec0;
+}
+
+.entry-item {
+  margin: 1rem 0;
+}
+
+.entry-item input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.entry-item input:focus {
+  outline: none;
+  border-color: #7b2ff7;
+}
+
+/* Forgot password link */
+.forgot-wrapper {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-wrapper a {
+  font-size: 0.85rem;
+}
+
+/* Buttons */
+.buttons button {
+  width: 100%;
+  padding: 12px;
+  background: #7b2ff7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+  background: #e52e71;
+}
+
+/* Footer link */
+.form-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.form-footer a {
+  color: #7b2ff7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .left-section, .right-section {
+    flex: none;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .left-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-container {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+}

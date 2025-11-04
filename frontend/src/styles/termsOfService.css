@@ -1,0 +1,90 @@
+/* ===== Terms of Service (Professional Dark Theme) ===== */
+.terms-container {
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  color: #e0e0e0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.9;
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.terms-container h1 {
+  text-align: center;
+  font-size: 2.3em;
+  color:#c9a0ff;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(153, 102, 255, 0.3);
+}
+
+.terms-container h2 {
+  color: #c9a0ff;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  font-weight: 500;
+  border-left: 4px solid #9a6aff;
+  padding-left: 10px;
+}
+
+.terms-container p {
+  margin-bottom: 14px;
+  color: #cccccc;
+  font-size: 1.02em;
+  text-align: justify;
+}
+
+.terms-container ul {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.terms-container li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #bcbcbc;
+}
+
+.terms-container a {
+  color: #b486ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.25s ease-in-out;
+}
+
+.terms-container a:hover {
+  color: #d6b6ff;
+  text-decoration: underline;
+}
+
+.terms-container .link {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.terms-container hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 30px 0;
+}
+
+/* ===== Optional Scroll Enhancement ===== */
+.terms-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terms-container::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+.terms-container::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}

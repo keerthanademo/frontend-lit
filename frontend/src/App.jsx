@@ -25,6 +25,9 @@ import EcomProductsView from './components/EcommerceAdmin/EcomProductsView';
 import EcomProductForm from './components/EcommerceAdmin/EcomProductForm';
 import EditProductForm from './components/EcommerceAdmin/EditProductForm';
 import ProductDetailPage from './components/EcommerceAdmin/ProductDetailPage';
+import Sign from './components/EcommerceAdmin/Sign';
+// import Password from './components/EcommerceAdmin/pass'; 
+
 
 // Dummy admin pages for sidebar
 import {
@@ -50,6 +53,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Profile from './pages/profile/Profile/Profile';
 import PrivacyPolicy from './pages/privacyPolicy';
+import ReturnPolicy from './pages/returnPolicy';
+import TermsOfService from './pages/termsOfService';
 import OrdersProfile from './pages/profile/Orders';
 import SettingsProfile from './pages/profile/Settings';
 import Settings from './pages/profile/Settings'; // keep both if different
@@ -58,6 +63,9 @@ import OrderConfirmation from './pages/OrderConfirmation';
 import NotFound from './pages/NotFound';
 import ProductListPage from './pages/productListPage';
 import ComingSoonPage from './components/ComingSoonPage/ComingSoonPage';
+import PricingPage from './pages/subscriptions';
+
+
 
 // Orders pages (new)
 import OrdersPage from './pages/OrdersPage/OrdersPage';
@@ -77,6 +85,10 @@ import MailItemEditor from './pages/admin/MailItemEditor/MailItemEditor';
 import AdminArticlePage from './pages/admin/ArticlePage';
 import DeleteProductForm from './components/DeleteProductForm';
 import AuthCallback from './pages/AuthCallback';
+import AdminOrders from './components/EcommerceAdmin/AdminOrders';
+import Customer from './components/EcommerceAdmin/Customer';
+import EcomAnalytics from './components/EcommerceAdmin/EcommerceAnalytics';
+import Adminoffers from './components/EcommerceAdmin/Adminoffers';
 
 // Pages - Newsletter
 import NewsletterPage from './pages/Newsletter/NewsletterPage/NewsletterPage';
@@ -117,6 +129,10 @@ const AppContent = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/terms" element={<TermsOfService />}/>
+          <Route path="/returnpolicy" element={<ReturnPolicy/>}/>
+          <Route path="/subscriptions" element={<PricingPage />} />
+
 
           {/* Orders routes */}
           <Route path="/orders" element={<OrdersPage />} />
@@ -132,6 +148,8 @@ const AppContent = () => {
           <Route path="/ir-icon" element={<ComingSoonPage />} />
           <Route path="/socials" element={<ComingSoonPage />} />
           <Route path="/avatar-store" element={<ComingSoonPage />} />
+          <Route path="/signin" element={<Sign />} />
+          {/* <Route path="/password" element={<Password />} /> */}
 
           {/* Newsletter Routes */}
           <Route element={<MainLayout />}>
@@ -153,12 +171,12 @@ const AppContent = () => {
             <Route path="products/add" element={<EcomProductForm />} />
             <Route path="products/edit/:id" element={<EditProductForm />} />
             <Route path="products/:id" element={<ProductDetailPage />} />
-            <Route path="analytics" element={<Analytics />} />
-            <Route path="offers" element={<Offers />} />
+            <Route path="analytics" element={<EcomAnalytics />} />
+            <Route path="offers" element={<Adminoffers />} />
             <Route path="inventory" element={<Inventory />} />
-            <Route path="orders" element={<Orders />} />
+            <Route path="orders" element={<AdminOrders />} />
             <Route path="sales" element={<Sales />} />
-            <Route path="customers" element={<Customers />} />
+            <Route path="customers" element={<Customer />} />
             <Route path="newsletter" element={<Newsletter />} />
             <Route path="settings" element={<AdminSettings />} />
           </Route>

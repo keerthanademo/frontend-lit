@@ -121,7 +121,10 @@
 
 .about-description {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  /* color: #ffffff; */
+  font-size: 1.2rem;
+  /* font-size:larger; */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
   margin-bottom: 1rem;
 }

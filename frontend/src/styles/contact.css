@@ -147,13 +147,13 @@
 }
 
 .reach-out-title {
-  font-size: 1.5rem; /* Equivalent to h5 */
+  font-size: 1.2rem; /* Equivalent to h5 */
   /* margin-bottom: 2rem; */
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .reach-out-para {
-  font-size: 1rem; /* Equivalent to body2 */
+  font-size: small;
   color: var(--text-placeholder);
   margin-bottom: 30px;
   margin-top: 10px;
@@ -174,15 +174,15 @@
 
 .info-block h6 {
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--purple-overlay-start);
+  color:#9333EA;
   margin: 0 0 8px 0;
 }
 
 .info-block a {
-  font-weight: 500;
+  font-weight: 100;
   color: var(--text-placeholder);
   text-decoration: none;
   transition: color 0.3s ease;

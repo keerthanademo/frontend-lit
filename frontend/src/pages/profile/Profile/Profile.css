@@ -1048,6 +1048,37 @@
   }
 } 
 
+
+/* ===================================== */
+/* Editable Text Input (Inline Edit Mode) */
+/* ===================================== */
+
+/* === Editable Text Restyle === */
+.editable-text {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: text;
+  transition: all 0.25s ease;
+  color: rgba(255, 255, 255, 0.9);
+  background: transparent;
+  border-bottom: 1px dashed transparent;
+}
+
+.editable-text:hover {
+  border-bottom: 1px dashed rgba(162, 89, 255, 0.6);
+  background: rgba(162, 89, 255, 0.05);
+}
+
+.editable-text:focus {
+  outline: none;
+  border-bottom: 1px dashed rgba(162, 89, 255, 0.8);
+  background: rgba(162, 89, 255, 0.12);
+  box-shadow: 0 0 10px rgba(162, 89, 255, 0.3);
+}
+
+
+
 @media (min-width: 769px) {
   .mobile-profile-header,
   .mobile-header-bar,
@@ -1602,3 +1633,127 @@
     height: 100px !important;
   }
 }
+
+/* ===== Editable Input Style Fix for Account & Shipping Sections =====
+.account-info input[type="text"],
+.account-info input[type="email"],
+.account-info input[type="tel"],
+.account-info input[type="date"],
+.shipping-address textarea {
+  background-color: #181818;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.account-info input:focus,
+.shipping-address textarea:focus {
+  border-color: #6c63ff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+}
+
+.account-info label,
+.shipping-address label {
+  color: #b3b3b3;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.account-info,
+.shipping-address {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.account-info button,
+.shipping-address button {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 1000px;
+}
+
+.account-info button:hover,
+.shipping-address button:hover {
+  background-color: #867bff;
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.6);
+} */
+.edit-icon, .save-icon {
+  color: #a259ff;
+  font-size: 1.1rem;
+  margin-left: 15px;
+  transition: transform 0.2s;
+}
+
+.edit-icon:hover, .save-icon:hover {
+  transform: scale(1.2);
+}
+
+
+/* .profile-addresses-display .address-card {
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid #2a2a2a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.profile-addresses-display,
+.profile-addresses-display .address-card {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.profile-addresses-display .address-card::before,
+.profile-addresses-display .address-card::after {
+  content: none;
+} */
+
+
+.address-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px; /* space between circle and text */
+  padding: 10px 16px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.address-circle {
+  width: 10px;
+  height: 10px;
+  margin-top: 6px; /* align with top line of text */
+  border-radius: 50%;
+  /* background: rgba(162, 89, 255, 0.9);  */
+  flex-shrink: 0;
+}
+
+.address-card.primary .address-circle {
+  /* background: rgba(255, 215, 0, 0.9); */
+}
+
+.address-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* gap between text and label */
+}
+

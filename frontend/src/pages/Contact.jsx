@@ -123,13 +123,14 @@
             <p className="reach-out-para">Our team is available from Monday to Friday,<br></br> 10 AM – 6 PM IST.</p>
             <div className="info-grid">
               <div className="info-block">
-                <h6>For Any Queries</h6>
+                <h6>Email us at</h6>
                 <a href="mailto:info@luxuryintaste.com">info@luxuryintaste.com</a>
               </div>
-              <div className="info-block">
+              {/* <div className="info-block">
                 <h6>For Newsletter</h6>
                 <a href="mailto:newsletter@yourdomain.com">newsletter@yourdomain.com</a>
-              </div>
+              </div> */}
+             
             </div>
           </div>
         </div>

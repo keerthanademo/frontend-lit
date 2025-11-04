@@ -53,14 +53,21 @@ const About = () => {
         <div className="about-main-section-mobile">
           <h1 className="about-title">About Us</h1>
           <p className="about-description">
-            LIT, by Faslit Accor Private Limited, is a one-of-a-kind platform that brings together play, curation, and culture. We reimagine how people engage with taste, style, choices, and luxury. From our fashion game and curated e-commerce platform House of LIT, to exclusive weekly newsletters and more. We invite you to immerse yourself into an experience where your expression knows no limit.
+             LIT by Faslit Accor Private Limited is India’s first-of-its-kind fashion gaming platform — 
+                where style meets strategy, and your fashion sense becomes your edge.
           </p>
           
           <Illustration className="about-illustration-mobile" />
           
           <p className="about-description">
-            Here, your choices are rewarded, your sense of style evolves, and your fashion instincts are sharpened to recognize what truly stands out. We help you build a personal style that is sharp, intentional, and unmistakably yours. Whether you’re playing to win, shopping for curated luxury, or staying ahead of fashion trends. LIT is designed to elevate your taste, one choice at a time.
-          </p>
+            Explore the HOUSE OF LIT, our curated e-commerce experience, 
+            where every product is handpicked for quality, exclusivity, 
+            and global appeal. Unlock access to coveted pieces, insider sales, and rewards just by playing the LIT game.
+            </p>
+            <p className="about-description">
+              We’re not just building a brand — we’re cultivating taste, 
+              building community, and redefining how luxury is experienced.
+            </p>
         </div>
       ) : (
         // --- DESKTOP LAYOUT (Original side-by-side) ---
@@ -68,10 +75,16 @@ const About = () => {
           <div className="about-text-content">
             <h1 className="about-title">About Us</h1>
             <p className="about-description">
-              LIT, by Faslit Accor Private Limited, is a one-of-a-kind platform that brings together play, curation, and culture. We reimagine how people engage with taste, style, choices, and luxury. From our fashion game and curated e-commerce platform House of LIT, to exclusive weekly newsletters and more. We invite you to immerse yourself into an experience where your expression knows no limit.
+                LIT by Faslit Accor Private Limited is India’s first-of-its-kind fashion gaming platform — 
+                where style meets strategy, and your fashion sense becomes your edge. </p>
+            <p className="about-description">
+              Explore the HOUSE OF LIT, our curated e-commerce experience, 
+              where every product is handpicked for quality, exclusivity, 
+              and global appeal. Unlock access to coveted pieces, insider sales, and rewards just by playing the LIT game.
             </p>
             <p className="about-description">
-              Here, your choices are rewarded, your sense of style evolves, and your fashion instincts are sharpened to recognize what truly stands out. We help you build a personal style that is sharp, intentional, and unmistakably yours. Whether you’re playing to win, shopping for curated luxury, or staying ahead of fashion trends. LIT is designed to elevate your taste, one choice at a time.
+              We’re not just building a brand — we’re cultivating taste, 
+              building community, and redefining how luxury is experienced.
             </p>
           </div>
           <Illustration className="about-illustration" />
